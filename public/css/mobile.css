@@ -39,7 +39,7 @@ header img {
     display: flex;
     justify-content: center;
     width: 100%;
-    font-size: 22px;
+    font-size: 18px;
     padding-bottom: 22px;
     padding-top: 22px;
     background-color: #eaeaea;
@@ -58,6 +58,7 @@ header img {
     width: 100%;
     background-color: #f7f7f7;
     text-align: center;
+    padding-bottom: 60px;
 }
 
 #header_text h1 {
@@ -72,13 +73,13 @@ header img {
 }
 /*Bouton_recherche*/
 #bouton_recherche {
-    background-color: #FF79DA;
+    background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
     color: white;
     border: none;
     border-radius: 40px;
     width: 220px;
     height: 50px;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
 }
 /*Cards_fonctionnement*/
 #fonctionnement {
@@ -108,6 +109,38 @@ header img {
     margin-bottom: 30px;
 }
 
+.card_body_fonction {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.logo_number_fonction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    left: 15px;
+    background-color: #9356DC;
+    border-radius: 20px;
+    height: 25px;
+    width: 25px;
+    color: white;
+    font-size: 12px;
+}
+
+.card_logo_fonction {
+    padding-left: 40px;
+    font-size: 22px;
+}
+
+.card_text_fonction {
+    padding-left: 30px;
+    font-size: 20px;
+}
+
 /*Card_Restaurants*/
 #restaurants {
     display: flex;
@@ -115,26 +148,28 @@ header img {
     width: 100%;
 }
 
+.titre_section {
+    padding-left: 25px;
+}
+
 #all_cards {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .whole_card {
     background-color: white;
     width: 90%;
-    margin-left: 25px;
     border-radius: 25px;
     margin-bottom: 25px;
-    box-shadow: 3px 3px 3px lightgrey;
-}
-
-.whole_card:hover {
-    transform: scale(1.010);
+    box-shadow: 3px 3px 5px lightgrey;
 }
 
 .card_body_1 {
+    position: relative;
     margin-left: 15px;
     margin-bottom: 10px;
     display: flex;
@@ -163,18 +198,40 @@ header img {
     object-fit: cover;
 }
 
-.heart_like {
+.card_body_1 i {
     position: absolute;
-    bottom: 30px;
-    right: 50px;
+    right: 30px;
+    top: 30px;
 }
 
 /*Footer*/
 #liste_footer {
     list-style-type: none;
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+}
+
+#liste_footer li {
+    padding-bottom: 13px;
 }
 
 footer {
-    background-color: black;
+    background-color: #353535;
+    color: white;
+}
+
+footer img {
+    margin-left: 35px;
+    margin-top: 25px;
+    width: 108px;
+    height: 18px;
+    filter: invert(94%) sepia(94%) saturate(25%) hue-rotate(60deg) brightness(106%) contrast(109%);
+}
+
+footer i {
+    padding-right: 12px;
+}
+
+#logo_footer {
     color: white;
 }
