@@ -1,0 +1,27 @@
+@media screen and (min-width :768px) {
+    /*Fonction*/
+    #all_card_fonction {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .card_fonction {
+        margin-bottom: 0px;
+        width: 30%;
+    }
+    
+    .card_body_fonction {
+        align-items: center;
+    }
+    /*Restaurants*/
+    #all_cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .whole_card {
+        width: 40%;
+    }
+}
