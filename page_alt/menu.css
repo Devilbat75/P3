@@ -101,6 +101,7 @@ header img {
 }
 
 .card_in {
+    position: relative;
     margin-left: 25px;
     display: flex;
     flex-direction: row;
@@ -129,18 +130,20 @@ header img {
     padding-top: 40px;
     font-weight: bolder;
     font-size: 8px;
+    padding-right: 120px;
 }
 
 .bouton_check {
-    transform-origin: right;
-    transition: transform 800ms;
+    position: absolute;
+    opacity: 0;
     font-size: 25px;
     height: 100%;
     width: 80px;
-    padding-top: 25px;
+    right: 0px;
 }
 
 .bouton_check:hover {
+    opacity: 1;
     font-size: 25px;
     height: 100%;
     width: 100px;
