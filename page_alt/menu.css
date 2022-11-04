@@ -127,38 +127,43 @@ header img {
 }
 
 .prix {
-    padding-top: 40px;
+    margin-top: 40px;
     font-weight: bolder;
     font-size: 8px;
-    padding-right: 120px;
+    margin-right: 120px;
 }
 
 .bouton_check {
     position: absolute;
     opacity: 0;
-    font-size: 25px;
-    height: 150%;
-    width: 180px;
+    height: 100%;
+    width: 100px;
     right: 0px;
 }
 
-.bouton_check:hover::before {
-    transform: scaleX(0);
-}
-
 .bouton_check:hover {
-    transform: rotate(-360deg) scalex(1);
-    transition: ease 1.2s;
+    animation-name: animate;
+    animation-duration: 2.5s;
     transform-origin: right;
-    opacity: 1;
+    color: white;
     font-size: 25px;
-    height: 100%;
-    width: 100px;
+    background-color: #99E2D0;
     padding-top: 25px;
     padding-left: 35px;
-    background-color: #99E2D0;
-    border-radius: 0px 15px 15px 0px;
-    color: white;
+}
+
+@keyframes animate
+{
+    from {
+        transform: scaleX(0);
+        opacity: 0;
+        border-radius: 0px 15px 15px 0px;
+    }
+    to {
+        transform: scaleX(1);
+        opacity: 1;
+        border-radius: 0px 15px 15px 0px;
+    }
 }
 
 /*Bouton_commande*/
