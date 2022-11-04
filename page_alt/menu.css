@@ -137,12 +137,19 @@ header img {
     position: absolute;
     opacity: 0;
     font-size: 25px;
-    height: 100%;
-    width: 80px;
+    height: 150%;
+    width: 180px;
     right: 0px;
 }
 
+.bouton_check:hover::before {
+    transform: scaleX(0);
+}
+
 .bouton_check:hover {
+    transform: rotate(-360deg) scalex(1);
+    transition: ease 1.2s;
+    transform-origin: right;
     opacity: 1;
     font-size: 25px;
     height: 100%;
