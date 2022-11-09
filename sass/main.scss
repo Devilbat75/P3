@@ -150,7 +150,6 @@ header img {
         justify-content: center;
         transform-origin: right;
         transform: scaleX(1);
-        transition: transform 500ms;
         background-color: #99E2D0;
         color: white;
         border-radius: 0px 15px 15px 0px;
@@ -166,8 +165,7 @@ header img {
     }
 
     i {
-        animation-name: rotation;
-        animation-duration: 2s;
+        animation: rotation 5s linear;
     }
 }
 
@@ -175,6 +173,7 @@ header img {
     position: absolute;
     right: 0px;
     transform: scaleX(0);
+    transition: transform 5s;
     opacity: 0;
     height: 100%;
 }
