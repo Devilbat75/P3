@@ -150,7 +150,8 @@ header img {
 }
 
 .card_in:hover i {
-  animation: rotation 3s linear;
+  animation-name: rotation;
+  animation-duration: 2s;
 }
 
 .card_in__bouton_check {
