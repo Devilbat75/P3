@@ -163,7 +163,7 @@ header img {
         font-size: 8px;
     }
 
-    &:hover {
+    &:active {
         & .card_in__bouton_check {
             transform: scaleX(1);
         }

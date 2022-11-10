@@ -163,10 +163,10 @@ header img {
   font-weight: bolder;
   font-size: 8px;
 }
-.card_in:hover .card_in__bouton_check {
+.card_in:active .card_in__bouton_check {
   transform: scaleX(1);
 }
-.card_in:hover .card_in__bouton_check .fa-solid.fa-circle-check {
+.card_in:active .card_in__bouton_check .fa-solid.fa-circle-check {
   -webkit-animation: rotation 500ms forwards;
           animation: rotation 500ms forwards;
 }
