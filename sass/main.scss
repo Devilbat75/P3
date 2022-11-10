@@ -145,23 +145,7 @@ header img {
 
 .card_in:hover {
     .card_in__bouton_check {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform-origin: right;
         transform: scaleX(1);
-        background-color: #99E2D0;
-        color: white;
-        border-radius: 0px 15px 15px 0px;
-        width: 15%;
-        height: 100%;
-
-        @media screen and (min-width :650px) {
-            width: 40%;
-        }
-
-        opacity: 1;
-        font-size: 25px;
     }
 
     i {
@@ -173,9 +157,20 @@ header img {
     position: absolute;
     right: 0px;
     transform: scaleX(0);
-    transition: transform 5s;
-    opacity: 0;
+    transition: transform 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: right;
+    background-color: #99E2D0;
+    color: white;
+    border-radius: 0px 15px 15px 0px;
+    width: 15%;
     height: 100%;
+    font-size: 25px;
+    @media screen and (min-width :650px) {
+        width: 40%;
+    }
 }
 
 /*Bouton_commande*/
