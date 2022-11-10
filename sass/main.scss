@@ -115,7 +115,7 @@ header img {
         position: absolute;
         right: 0px;
         transform: scaleX(0);
-        transition: transform 1s;
+        transition: transform 500ms;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -164,12 +164,12 @@ header img {
     }
 
     &:hover {
-        .card_in__bouton_check {
+        & .card_in__bouton_check {
             transform: scaleX(1);
         }
 
-        i {
-            animation: rotation 5s linear;
+        & .card_in__bouton_check .fa-solid.fa-circle-check {
+            animation: rotation 500ms forwards;
         }
     }
 }
@@ -241,22 +241,22 @@ footer i {
 
 @keyframes rotation {
     0% {
-        transform: rotate(0°);
+        transform: rotate(0);
     }
 
     25% {
-        transform: rotate(-90°);
+        transform: rotate(90deg);
     }
 
     50% {
-        transform: rotate(-180°);
+        transform: rotate(180deg);
     }
 
     75% {
-        transform: rotate(-270°);
+        transform: rotate(270deg);
     }
 
     100% {
-        transform: rotate(-360°);
+        transform: rotate(360deg);
     }
 }
