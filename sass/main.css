@@ -98,23 +98,6 @@ header img {
   margin-bottom: 30px;
 }
 
-.card_in__text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-basis: 75%;
-}
-@media screen and (min-width: 650px) {
-  .card_in__text {
-    flex-basis: 50%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .card_in__text {
-    flex-basis: 56%;
-  }
-}
-
 .card_in {
   position: relative;
   margin-left: 25px;
@@ -131,31 +114,6 @@ header img {
   font-size: 15px;
   box-shadow: 3px 3px 5px lightgrey;
 }
-
-.card_in h3 {
-  margin-bottom: 8px;
-}
-
-.card_in p {
-  margin-top: 0px;
-  font-weight: 300;
-}
-
-.card_in__prix {
-  display: flex;
-  align-self: flex-end;
-  font-weight: bolder;
-  font-size: 8px;
-}
-
-.card_in:hover .card_in__bouton_check {
-  transform: scaleX(1);
-}
-.card_in:hover i {
-  -webkit-animation: rotation 5s linear;
-          animation: rotation 5s linear;
-}
-
 .card_in__bouton_check {
   position: absolute;
   right: 0px;
@@ -176,6 +134,42 @@ header img {
   .card_in__bouton_check {
     width: 40%;
   }
+}
+.card_in__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-basis: 75%;
+}
+@media screen and (min-width: 650px) {
+  .card_in__text {
+    flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card_in__text {
+    flex-basis: 56%;
+  }
+}
+.card_in h3 {
+  margin-bottom: 8px;
+}
+.card_in p {
+  margin-top: 0px;
+  font-weight: 300;
+}
+.card_in__prix {
+  display: flex;
+  align-self: flex-end;
+  font-weight: bolder;
+  font-size: 8px;
+}
+.card_in:hover .card_in__bouton_check {
+  transform: scaleX(1);
+}
+.card_in:hover i {
+  -webkit-animation: rotation 5s linear;
+          animation: rotation 5s linear;
 }
 
 /*Bouton_commande*/

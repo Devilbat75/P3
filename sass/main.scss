@@ -95,21 +95,6 @@ header img {
     margin-bottom: 30px;
 }
 
-.card_in__text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-basis: 75%;
-
-    @media screen and (min-width :650px) {
-        flex-basis: 50%;
-    }
-
-    @media screen and (min-width :768px) {
-        flex-basis: 56%;
-    }
-}
-
 .card_in {
     position: relative;
     margin-left: 25px;
@@ -125,51 +110,67 @@ header img {
     padding-left: 20px;
     font-size: 15px;
     box-shadow: 3px 3px 5px lightgrey;
-}
 
-.card_in h3 {
-    margin-bottom: 8px;
-}
+    &__bouton_check {
+        position: absolute;
+        right: 0px;
+        transform: scaleX(0);
+        transition: transform 1s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform-origin: right;
+        background-color: #99E2D0;
+        color: white;
+        border-radius: 0px 15px 15px 0px;
+        width: 15%;
+        height: 100%;
+        font-size: 25px;
 
-.card_in p {
-    margin-top: 0px;
-    font-weight: 300;
-}
-
-.card_in__prix {
-    display: flex;
-    align-self: flex-end;
-    font-weight: bolder;
-    font-size: 8px;
-}
-
-.card_in:hover {
-    .card_in__bouton_check {
-        transform: scaleX(1);
+        @media screen and (min-width :650px) {
+            width: 40%;
+        }
     }
 
-    i {
-        animation: rotation 5s linear;
-    }
-}
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-basis: 75%;
 
-.card_in__bouton_check {
-    position: absolute;
-    right: 0px;
-    transform: scaleX(0);
-    transition: transform 1s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform-origin: right;
-    background-color: #99E2D0;
-    color: white;
-    border-radius: 0px 15px 15px 0px;
-    width: 15%;
-    height: 100%;
-    font-size: 25px;
-    @media screen and (min-width :650px) {
-        width: 40%;
+        @media screen and (min-width :650px) {
+            flex-basis: 50%;
+        }
+
+        @media screen and (min-width :768px) {
+            flex-basis: 56%;
+        }
+    }
+
+    & h3 {
+        margin-bottom: 8px;
+    }
+
+    & p {
+        margin-top: 0px;
+        font-weight: 300;
+    }
+
+    &__prix {
+        display: flex;
+        align-self: flex-end;
+        font-weight: bolder;
+        font-size: 8px;
+    }
+
+    &:hover {
+        .card_in__bouton_check {
+            transform: scaleX(1);
+        }
+
+        i {
+            animation: rotation 5s linear;
+        }
     }
 }
 
