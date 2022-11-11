@@ -24,4 +24,8 @@
     .whole_card {
         width: 40%;
     }
+
+    .lettre {
+        font-size: 65px;
+    }
 }

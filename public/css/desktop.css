@@ -18,4 +18,8 @@
     .whole_card {
         width: 46%;
     }
+    
+    .lettre {
+        font-size: 80px;
+    }
 }
