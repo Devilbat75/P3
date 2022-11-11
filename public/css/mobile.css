@@ -9,7 +9,7 @@
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #000;
+    background: linear-gradient(to bottom right, #f286d4, #9463cf);
     display: flex;
     justify-content: center;
     align-items: center;
