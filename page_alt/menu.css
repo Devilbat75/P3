@@ -99,26 +99,23 @@ header img {
 }
 
 .card_in {
-  position: relative;
-  margin-left: 25px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 90%;
+  justify-content: space-between;
+  width: 98%;
   border-radius: 15px 15px 15px 15px;
   background-color: white;
   height: 65px;
   margin-bottom: 20px;
   padding-bottom: 0px;
-  padding-left: 20px;
+  padding-left: 15px;
   font-size: 15px;
   box-shadow: 3px 3px 5px lightgrey;
 }
 .card_in__bouton_check {
-  position: absolute;
-  right: 0px;
   transform: scaleX(0);
-  transition: transform 500ms;
+  transition: transform 1s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,7 +123,7 @@ header img {
   background-color: #99E2D0;
   color: white;
   border-radius: 0px 15px 15px 0px;
-  width: 15%;
+  width: 0%;
   height: 100%;
   font-size: 25px;
 }
@@ -139,7 +136,7 @@ header img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex-basis: 75%;
+  flex-basis: 90%;
 }
 @media screen and (min-width: 650px) {
   .card_in__text {
@@ -162,13 +159,16 @@ header img {
   display: flex;
   align-self: flex-end;
   font-weight: bolder;
-  font-size: 8px;
+  font-size: 15px;
+  font-weight: bolder;
+  margin-right: 10px;
 }
 .card_in:active .card_in__bouton_check {
   transform: scaleX(1);
+  animation: card_in__width 1s forwards;
 }
 .card_in:active .card_in__bouton_check .fa-solid.fa-circle-check {
-  animation: rotation 500ms forwards;
+  animation: rotation 1500ms;
 }
 
 /*Bouton_commande*/
@@ -181,6 +181,9 @@ header img {
 }
 
 #bouton_commande {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: white;
   border: none;
@@ -188,6 +191,12 @@ header img {
   width: 220px;
   height: 50px;
   margin-bottom: 0px;
+  margin-left: 25%;
+}
+
+#bouton_commande:hover {
+  background: linear-gradient(176deg, #fface8, #ae80e5);
+  box-shadow: 2px 2px 4px black;
 }
 
 /*Footer*/
@@ -238,6 +247,14 @@ footer i {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes card_in__width {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 15%;
   }
 }
 
