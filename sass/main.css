@@ -96,6 +96,12 @@ header img {
   font-weight: 300;
   margin-left: 15px;
   font-size: 20px;
+  opacity: 0;
+  transform-origin: left;
+  -webkit-animation: spawn_title 2s forwards;
+          animation: spawn_title 2s forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .all_cards {
@@ -126,6 +132,10 @@ header img {
   padding-left: 15px;
   font-size: 15px;
   box-shadow: 3px 3px 5px lightgrey;
+  -webkit-animation: spawn 1s forwards;
+          animation: spawn 1s forwards;
+  transform-origin: bottom;
+  opacity: 0;
 }
 @media screen and (min-width: 650px) {
   .card_in {
@@ -189,6 +199,21 @@ header img {
 .card_in:active .card_in__bouton_check .fa-solid.fa-circle-check {
   -webkit-animation: rotation 2s;
           animation: rotation 2s;
+}
+
+.card_in:nth-child(1) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.card_in:nth-child(2) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.card_in:nth-child(3) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 
 /*Bouton_commande*/
@@ -306,5 +331,41 @@ footer i {
   }
   to {
     width: 150px;
+  }
+}
+@-webkit-keyframes spawn {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes spawn {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes spawn_title {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@keyframes spawn_title {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -92,6 +92,10 @@ header img {
     font-weight: 300;
     margin-left: 15px;
     font-size: 20px;
+    opacity: 0;
+    transform-origin: left;
+    animation: spawn_title 2s forwards;
+    animation-delay: 1s;
 }
 
 .all_cards {
@@ -120,6 +124,9 @@ header img {
     padding-left: 15px;
     font-size: 15px;
     box-shadow: 3px 3px 5px lightgrey;
+    animation: spawn 1s forwards;
+    transform-origin: bottom;
+    opacity: 0;
     @media screen and (min-width :650px) {
         width: 30%;
         height: 180px;
@@ -183,6 +190,18 @@ header img {
             animation: rotation 2s;
         }
     }
+}
+
+.card_in:nth-child(1) {
+    animation-delay: 2s;
+}
+
+.card_in:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.card_in:nth-child(3) {
+    animation-delay: 4s;
 }
 
 /*Bouton_commande*/
@@ -285,5 +304,25 @@ footer i {
 
     to {
         width: 150px;
+    }
+}
+
+@keyframes spawn {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes spawn_title {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+        opacity: 1;
     }
 }
