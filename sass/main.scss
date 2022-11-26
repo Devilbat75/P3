@@ -5,6 +5,11 @@
     font-weight: 500;
 }
 
+body {
+    max-width: 1400px;
+    margin: auto;
+}
+
 * h1 , h2 , h3 {
     font-family: Shrikhand;
 }
@@ -104,10 +109,6 @@ header img {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
-    @media screen and (min-width :650px) {
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
 }
 
 .card_in {
@@ -127,16 +128,10 @@ header img {
     animation: spawn 1s forwards;
     transform-origin: bottom;
     opacity: 0;
-    @media screen and (min-width :650px) {
-        width: 30%;
-        height: 180px;
-        justify-content: center;
-        align-items: flex-start;
-    }
+    cursor: pointer;
 
     &__bouton_check {
-        transform: scaleX(0);
-        transition: transform 1s;
+        opacity: 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -144,12 +139,8 @@ header img {
         background-color: #99E2D0;
         color: white;
         border-radius: 0px 15px 15px 0px;
-        width: 15%;
         height: 100%;
         font-size: 25px;
-        @media screen and (min-width :650px) {
-            width: 150px;
-        }
     }
 
     &__text {
@@ -179,10 +170,9 @@ header img {
 
     &:active {
         & .card_in__bouton_check {
-            transform: scaleX(1);
             animation: card_in__width 1s forwards;
             @media screen and (min-width :650px) {
-                animation: card_in_width_tablette 1s;
+                animation: card_in_width_tablette 1.5s;
             }
         }
 
@@ -290,10 +280,13 @@ footer i {
 @keyframes card_in__width {
     from {
         width: 0%;
+        transform: scaleX(0);
     }
 
     to {
         width: 15%;
+        transform: scaleX(1);
+        opacity: 1;
     }
 }
 
