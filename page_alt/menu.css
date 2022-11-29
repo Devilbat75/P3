@@ -113,6 +113,12 @@ body {
   align-items: center;
   margin-bottom: 30px;
 }
+@media screen and (min-width: 992px) {
+  .all_cards {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
 
 .card_in {
   display: flex;
@@ -133,17 +139,52 @@ body {
   opacity: 0;
   cursor: pointer;
 }
-.card_in__bouton_check {
+@media screen and (min-width: 992px) {
+  .card_in {
+    width: 32%;
+    font-size: 13px;
+  }
+}
+.card_in input {
   opacity: 0;
+  width: 0%;
+}
+.card_in__bouton_check {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 20%;
+  height: 100%;
+  background-color: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+}
+.card_in__label {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+.card_in__label {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+  cursor: pointer;
   transform-origin: right;
+}
+.card_in__label .fa-solid.fa-circle-check::before {
+  font-size: 22px;
   background-color: #99E2D0;
   color: white;
-  border-radius: 0px 15px 15px 0px;
+  width: 100%;
   height: 100%;
-  font-size: 25px;
+}
+.card_in__label:checked .fa-solid.fa-circle-check {
+  animation: rotation 2s;
+}
+.card_in__label:checked .card_in__bouton_check {
+  animation: card_in__width 2s forwards;
+  transform-origin: right;
 }
 .card_in__text {
   display: flex;
@@ -165,17 +206,6 @@ body {
   font-size: 15px;
   font-weight: bolder;
   margin-right: 10px;
-}
-.card_in:active .card_in__bouton_check {
-  animation: card_in__width 1s forwards;
-}
-@media screen and (min-width: 650px) {
-  .card_in:active .card_in__bouton_check {
-    animation: card_in_width_tablette 1.5s;
-  }
-}
-.card_in:active .card_in__bouton_check .fa-solid.fa-circle-check {
-  animation: rotation 2s;
 }
 
 .card_in:nth-child(1) {
@@ -270,21 +300,14 @@ footer i {
 }
 @keyframes card_in__width {
   from {
-    width: 0%;
+    width: 0px;
     transform: scaleX(0);
+    opacity: 0;
   }
   to {
-    width: 15%;
+    width: 10%;
     transform: scaleX(1);
     opacity: 1;
-  }
-}
-@keyframes card_in_width_tablette {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 150px;
   }
 }
 @keyframes spawn {
