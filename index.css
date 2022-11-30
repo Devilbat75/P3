@@ -439,4 +439,22 @@ footer i {
 
 #logo_footer {
   color: white;
+}
+
+@-webkit-keyframes like {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes like {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=index.css.map */

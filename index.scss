@@ -393,3 +393,13 @@ footer i {
 #logo_footer {
     color: white;
 }
+
+@keyframes like {
+    from {
+        transform: scale(0);
+    }
+ 
+    to {
+        transform: scale(1);
+    }
+}
