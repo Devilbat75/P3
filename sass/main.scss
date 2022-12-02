@@ -157,115 +157,49 @@ body {
 
 .card_in {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
     width: 98%;
-    border-radius: 15px 15px 15px 15px;
-    background-color: white;
-    height: 65px;
+    background-color: #ffff;
+    border-radius: 20px;
+    box-shadow: grey 3px 3px 4px;
     margin-bottom: 20px;
-    padding-bottom: 0px;
-    padding-left: 15px;
-    font-size: 15px;
-    box-shadow: 3px 3px 5px lightgrey;
-    animation: spawn 1s forwards;
-    transform-origin: bottom;
-    opacity: 0;
-    cursor: pointer;
-    @media screen and (min-width:992px) {
-        width: 32%;
-        font-size: 13px;
-    }
-    
-    & input {
-        opacity: 0;
-        width: 0%;
-    }
-
-    &__bouton_check {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 20%;
-        height: 100%;
-        background-color: #99E2D0;
-        border-radius: 0px 15px 15px 0px;
-    }
-
-    &__label {
+    height: 80px;
+    overflow: hidden;
+      &__bouton_check {
         position: absolute;
-        opacity: 1;
-        cursor: pointer;
-        height: 100%;
-        width: 100%;
         z-index: 2;
-    }
-
-    &__label {
-        display: flex;
         width: 100%;
-        overflow: hidden;
-        align-items: center;
+        height: 100%;
+        opacity: 0;
         cursor: pointer;
-        transform-origin: right;
-        
-        .fa-solid.fa-circle-check::before {
-            font-size: 22px;
-            background-color: #99E2D0;
-            color: white;
-            width: 100%;
-            height: 100%;
-        }
-
         &:checked {
-            & .fa-solid.fa-circle-check {
-                animation: rotation 2s;
-            }
-
-            .card_in__bouton_check {
-                animation: card_in__width 2s forwards;
+            & .card_in__bouton_checked {
+                animation: slide 2s forwards;
                 transform-origin: right;
             }
         }
-    }
-
-    &__text {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        flex-basis: 90%;
-    }
-
-    & h3 {
-        margin-bottom: 8px;
-    }
-
-    & p {
-        margin-top: 0px;
-        font-weight: 300;
-    }
-
-    &__prix {
+      }
+      .card_in__bouton_checked {
+        width: 0px;
+      }
+      &__text {
+        padding-left: 15px;
+      }
+      & h3 {
+        margin-bottom: 5px;
+      }
+      & p {
+        margin-top: 10px;
+      }
+      &__prix {
         display: flex;
         align-self: flex-end;
-        font-weight: bolder;
-        font-size: 15px;
-        font-weight: bolder;
-        margin-right: 10px;
-    }
-}
-
-.card_in:nth-child(1) {
-    animation-delay: 2s;
-}
-
-.card_in:nth-child(2) {
-    animation-delay: 3s;
-}
-
-.card_in:nth-child(3) {
-    animation-delay: 4s;
+        justify-self: flex-end;
+        padding-left: 40%;
+      }
 }
 
 /*Bouton_commande*/
@@ -286,7 +220,7 @@ body {
     color: white;
     border: none;
     border-radius: 25px;
-    width: 20%;
+    width: 200px;
     height: 50px;
     margin-bottom: 50px;
 }
@@ -352,15 +286,13 @@ footer i {
     }
 }
 
-@keyframes card_in__width {
+@keyframes slide {
     from {
-        width: 0px;
         transform: scaleX(0);
         opacity: 0;
     }
 
     to {
-        width: 10%;
         transform: scaleX(1);
         opacity: 1;
     }
