@@ -64,7 +64,8 @@ header img {
   max-width: 1440px;
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: relative;
 }
 
@@ -119,7 +120,8 @@ body {
 .heart:hover .heart__2 {
   font-size: 25px;
   opacity: 1;
-  animation: like 3s;
+  -webkit-animation: like 3s;
+          animation: like 3s;
   transform-origin: center;
 }
 
@@ -130,14 +132,18 @@ body {
 /*Menu*/
 #menu h2 {
   border-bottom: 3px solid #99E2D0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   font-weight: 300;
   margin-left: 15px;
   font-size: 20px;
   opacity: 0;
   transform-origin: left;
-  animation: spawn_title 2s forwards;
-  animation-delay: 1s;
+  -webkit-animation: spawn_title 2s forwards;
+          animation: spawn_title 2s forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .all_cards {
@@ -169,19 +175,20 @@ body {
   height: 80px;
   overflow: hidden;
 }
+.card_in:hover .card_in__bouton {
+  -webkit-animation: slide 2s forwards;
+          animation: slide 2s forwards;
+  transform-origin: right;
+}
 .card_in__bouton_check {
   position: absolute;
   z-index: 2;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  opacity: 1;
   cursor: pointer;
 }
-.card_in__bouton_check:checked .card_in__bouton_checked {
-  animation: slide 2s forwards;
-  transform-origin: right;
-}
-.card_in .card_in__bouton_checked {
+.card_in .card_in__bouton {
   width: 0px;
 }
 .card_in__text {
@@ -270,12 +277,30 @@ footer i {
     margin-right: 40%;
   }
 }
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @keyframes rotation {
   from {
     transform: rotate(0);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes slide {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
   }
 }
 @keyframes slide {
@@ -288,12 +313,30 @@ footer i {
     opacity: 1;
   }
 }
+@-webkit-keyframes spawn {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
 @keyframes spawn {
   from {
     transform: scaleY(0);
   }
   to {
     transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes spawn_title {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
     opacity: 1;
   }
 }
@@ -306,7 +349,7 @@ footer i {
     opacity: 1;
   }
 }
-@keyframes like {
+@-webkit-keyframes like {
   from {
     transform: scale(0);
   }
@@ -314,5 +357,11 @@ footer i {
     transform: scale(1);
   }
 }
-
-/*# sourceMappingURL=main.css.map */
+@keyframes like {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=main.css.map */
