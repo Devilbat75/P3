@@ -185,18 +185,21 @@ body {
     opacity: 0;
     animation: spawn 2s forwards;
     animation-delay: 1.5s;
+    transform-origin: bottom;
 }
 
 .all_cards__2 {
     opacity: 0;
     animation: spawn 2s forwards;
     animation-delay: 3s;
+    transform-origin: bottom;
 }
 
 .all_cards__3 {
     opacity: 0;
     animation: spawn 2s forwards;
     animation-delay: 4.5s;
+    transform-origin: bottom;
 }
 
 .card_in {
@@ -216,7 +219,7 @@ body {
     cursor: pointer;
     &:hover {
         & .card_in__slide {
-            animation: slide 2s forwards;
+            animation: slide 1s forwards;
             transform-origin: right;
         }
     }
@@ -236,13 +239,19 @@ body {
         width: 0px;
       }
       &__text {
+        overflow: hidden;
+        text-overflow: ellipsis;
         padding-left: 15px;
         width: 100%;
       }
       & h3 {
         margin-bottom: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       & p {
+        overflow: hidden;
+        text-overflow: ellipsis;
         margin-top: 10px;
       }
       &__prix {

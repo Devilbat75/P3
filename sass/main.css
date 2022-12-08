@@ -64,7 +64,8 @@ header img {
   max-width: 1440px;
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: relative;
 }
 
@@ -119,7 +120,8 @@ body {
 .heart:hover .heart__2 {
   font-size: 25px;
   opacity: 1;
-  animation: like 3s;
+  -webkit-animation: like 3s;
+          animation: like 3s;
   transform-origin: center;
 }
 
@@ -130,14 +132,18 @@ body {
 /*Menu*/
 #menu h2 {
   border-bottom: 3px solid #99E2D0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   font-weight: 300;
   margin-left: 15px;
   font-size: 20px;
   opacity: 0;
   transform-origin: left;
-  animation: spawn_title 2s forwards;
-  animation-delay: 1s;
+  -webkit-animation: spawn_title 2s forwards;
+          animation: spawn_title 2s forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .all_cards__1 {
@@ -187,20 +193,29 @@ body {
 
 .all_cards__1 {
   opacity: 0;
-  animation: spawn 2s forwards;
-  animation-delay: 1.5s;
+  -webkit-animation: spawn 2s forwards;
+          animation: spawn 2s forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  transform-origin: bottom;
 }
 
 .all_cards__2 {
   opacity: 0;
-  animation: spawn 2s forwards;
-  animation-delay: 3s;
+  -webkit-animation: spawn 2s forwards;
+          animation: spawn 2s forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  transform-origin: bottom;
 }
 
 .all_cards__3 {
   opacity: 0;
-  animation: spawn 2s forwards;
-  animation-delay: 4.5s;
+  -webkit-animation: spawn 2s forwards;
+          animation: spawn 2s forwards;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+  transform-origin: bottom;
 }
 
 .card_in {
@@ -220,7 +235,8 @@ body {
   cursor: pointer;
 }
 .card_in:hover .card_in__slide {
-  animation: slide 2s forwards;
+  -webkit-animation: slide 1s forwards;
+          animation: slide 1s forwards;
   transform-origin: right;
 }
 .card_in__slide {
@@ -239,13 +255,19 @@ body {
   width: 0px;
 }
 .card_in__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
   padding-left: 15px;
   width: 100%;
 }
 .card_in h3 {
   margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card_in p {
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-top: 10px;
 }
 .card_in__prix {
@@ -325,12 +347,32 @@ footer i {
     margin-right: 40%;
   }
 }
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @keyframes rotation {
   from {
     transform: rotate(0);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes slide {
+  from {
+    transform: scaleX(0);
+    width: 0px;
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    width: 10%;
+    opacity: 1;
   }
 }
 @keyframes slide {
@@ -345,12 +387,30 @@ footer i {
     opacity: 1;
   }
 }
+@-webkit-keyframes spawn {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
 @keyframes spawn {
   from {
     transform: scaleY(0);
   }
   to {
     transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes spawn_title {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
     opacity: 1;
   }
 }
@@ -363,7 +423,7 @@ footer i {
     opacity: 1;
   }
 }
-@keyframes like {
+@-webkit-keyframes like {
   from {
     transform: scale(0);
   }
@@ -371,5 +431,11 @@ footer i {
     transform: scale(1);
   }
 }
-
-/*# sourceMappingURL=main.css.map */
+@keyframes like {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=main.css.map */
