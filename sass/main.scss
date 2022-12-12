@@ -201,6 +201,14 @@ body {
     animation: spawn 2s forwards;
     animation-delay: 1.5s;
     transform-origin: bottom;
+    & h2 {
+        font-family: 'Roboto';
+        font-size: 20px;
+        font-weight: 300;
+        align-self: flex-start;
+        margin-left: 20px;
+        text-decoration: underline #99E2D0;
+    }
 }
 
 .all_cards__2 {
@@ -208,6 +216,14 @@ body {
     animation: spawn 2s forwards;
     animation-delay: 3s;
     transform-origin: bottom;
+    & h2 {
+        font-family: 'Roboto';
+        font-size: 20px;
+        font-weight: 300;
+        align-self: flex-start;
+        margin-left: 20px;
+        text-decoration: underline #99E2D0;
+    }
 }
 
 .all_cards__3 {
@@ -215,6 +231,14 @@ body {
     animation: spawn 2s forwards;
     animation-delay: 4.5s;
     transform-origin: bottom;
+    & h2 {
+        font-family: 'Roboto';
+        font-size: 20px;
+        font-weight: 300;
+        align-self: flex-start;
+        margin-left: 20px;
+        border-bottom: #99E2D0 solid;
+    }
 }
 
 .card_in {
