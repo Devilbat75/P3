@@ -77,8 +77,7 @@ a {
   max-width: 1440px;
   width: 100%;
   height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: relative;
 }
 
@@ -133,8 +132,7 @@ body {
 .heart:hover .heart__2 {
   font-size: 25px;
   opacity: 1;
-  -webkit-animation: like 3s;
-          animation: like 3s;
+  animation: like 3s;
   transform-origin: center;
 }
 
@@ -145,18 +143,14 @@ body {
 /*Menu*/
 #menu h2 {
   border-bottom: 3px solid #99E2D0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   font-weight: 300;
   margin-left: 15px;
   font-size: 20px;
   opacity: 0;
   transform-origin: left;
-  -webkit-animation: spawn_title 2s forwards;
-          animation: spawn_title 2s forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation: spawn_title 2s forwards;
+  animation-delay: 1s;
 }
 
 .all_cards__1 {
@@ -206,28 +200,22 @@ body {
 
 .all_cards__1 {
   opacity: 0;
-  -webkit-animation: spawn 2s forwards;
-          animation: spawn 2s forwards;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  animation: spawn 2s forwards;
+  animation-delay: 1.5s;
   transform-origin: bottom;
 }
 
 .all_cards__2 {
   opacity: 0;
-  -webkit-animation: spawn 2s forwards;
-          animation: spawn 2s forwards;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  animation: spawn 2s forwards;
+  animation-delay: 3s;
   transform-origin: bottom;
 }
 
 .all_cards__3 {
   opacity: 0;
-  -webkit-animation: spawn 2s forwards;
-          animation: spawn 2s forwards;
-  -webkit-animation-delay: 4.5s;
-          animation-delay: 4.5s;
+  animation: spawn 2s forwards;
+  animation-delay: 4.5s;
   transform-origin: bottom;
 }
 
@@ -247,13 +235,11 @@ body {
 }
 @media screen and (min-width: 768px) {
   .card_in:hover .card_in__slide {
-    -webkit-animation: slide 1s forwards;
-            animation: slide 1s forwards;
+    animation: slide 1s forwards;
     transform-origin: right;
   }
   .card_in:hover .fa-circle-check {
-    -webkit-animation: rotation 1s forwards;
-            animation: rotation 1s forwards;
+    animation: rotation 1s forwards;
   }
 }
 .card_in__slide {
@@ -309,13 +295,11 @@ input[type=checkbox] {
 }
 
 input[type=checkbox]:checked + .toggle-content .card_in__slide {
-  -webkit-animation: slide 500ms both;
-          animation: slide 500ms both;
+  animation: slide 500ms both;
   transform-origin: right;
 }
 input[type=checkbox]:checked + .toggle-content .fa-circle-check {
-  -webkit-animation: rotation 700ms both;
-          animation: rotation 700ms both;
+  animation: rotation 700ms both;
 }
 
 /*Bouton_commande*/
@@ -388,32 +372,12 @@ footer i {
     margin-right: 40%;
   }
 }
-@-webkit-keyframes rotation {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
-}
 @keyframes rotation {
   from {
     transform: rotate(0);
   }
   to {
     transform: rotate(-360deg);
-  }
-}
-@-webkit-keyframes slide {
-  from {
-    transform: scaleX(0);
-    width: 0px;
-    opacity: 0;
-  }
-  to {
-    transform: scaleX(1);
-    width: 15%;
-    opacity: 1;
   }
 }
 @keyframes slide {
@@ -428,30 +392,12 @@ footer i {
     opacity: 1;
   }
 }
-@-webkit-keyframes spawn {
-  from {
-    transform: scaleY(0);
-  }
-  to {
-    transform: scaleY(1);
-    opacity: 1;
-  }
-}
 @keyframes spawn {
   from {
     transform: scaleY(0);
   }
   to {
     transform: scaleY(1);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes spawn_title {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
     opacity: 1;
   }
 }
@@ -462,14 +408,6 @@ footer i {
   to {
     transform: scaleX(1);
     opacity: 1;
-  }
-}
-@-webkit-keyframes like {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
   }
 }
 @keyframes like {
@@ -509,10 +447,8 @@ footer i {
   z-index: 99;
   left: 0;
   top: 0;
-  -webkit-animation: loading_end 1s ease-in forwards;
-          animation: loading_end 1s ease-in forwards;
-  -webkit-animation-delay: 4.43s;
-          animation-delay: 4.43s;
+  animation: loading_end 1s ease-in forwards;
+  animation-delay: 4.43s;
 }
 
 .lettre {
@@ -520,73 +456,47 @@ footer i {
   font-size: 45px;
   letter-spacing: 15px;
   margin-bottom: 150px;
-  -webkit-animation: flash 1.2s linear 3;
-          animation: flash 1.2s linear 3;
+  animation: flash 1.2s linear 3;
 }
 
 .lettre:nth-child(1) {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
 .lettre:nth-child(2) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .lettre:nth-child(3) {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .lettre:nth-child(4) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 .lettre:nth-child(5) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 .lettre:nth-child(6) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 .lettre:nth-child(7) {
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }
 
 .lettre:nth-child(8) {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 
 .lettre:nth-child(9) {
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
 
 .lettre:nth-child(10) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-@-webkit-keyframes flash {
-  0% {
-    color: #fff900;
-    text-shadow: 0 0 7px #fff900;
-  }
-  90% {
-    color: #484848;
-    text-shadow: none;
-  }
-  100% {
-    color: #fff900;
-    text-shadow: 0 0 7px #fff900;
-  }
+  animation-delay: 1s;
 }
 
 @keyframes flash {
@@ -601,20 +511,6 @@ footer i {
   100% {
     color: #fff900;
     text-shadow: 0 0 7px #fff900;
-  }
-}
-@-webkit-keyframes loading_end {
-  0% {
-    opacity: 1;
-    overflow: visible;
-    z-index: 99;
-  }
-  100% {
-    opacity: 0;
-    overflow: hidden;
-    z-index: 0;
-    width: 0%;
-    height: 0%;
   }
 }
 @keyframes loading_end {
@@ -872,8 +768,7 @@ footer i {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   height: 180px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .heart__1 {
@@ -900,8 +795,7 @@ footer i {
 .heart:hover .heart__2 {
   font-size: 25px;
   opacity: 1;
-  -webkit-animation: like 3s;
-          animation: like 3s;
+  animation: like 3s;
   transform-origin: center;
 }
 
@@ -948,4 +842,41 @@ footer i {
   to {
     transform: scale(1);
   }
-}/*# sourceMappingURL=main.css.map */
+}
+@media screen and (min-width: 992px) {
+  .whole_card {
+    width: 46%;
+  }
+  .lettre {
+    font-size: 80px;
+  }
+}
+@media screen and (min-width: 768px) {
+  /*Fonction*/
+  #all_card_fonction {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .card_fonction {
+    margin-bottom: 0px;
+    width: 30%;
+  }
+  .card_body_fonction {
+    align-items: center;
+  }
+  /*Restaurants*/
+  #all_cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .whole_card {
+    width: 40%;
+  }
+  .lettre {
+    font-size: 65px;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */
