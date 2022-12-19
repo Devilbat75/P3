@@ -193,6 +193,7 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2px;
+  align-self: flex-start;
 }
 @media screen and (min-width: 992px) {
   .all_cards__1 {
@@ -209,6 +210,7 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2px;
+  align-self: flex-start;
 }
 @media screen and (min-width: 992px) {
   .all_cards__2 {
@@ -226,6 +228,7 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2px;
+  align-self: flex-start;
 }
 @media screen and (min-width: 992px) {
   .all_cards__3 {
@@ -286,7 +289,7 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  width: 92%;
+  width: 97%;
   background-color: white;
   border-radius: 20px;
   box-shadow: grey 2px 2px 2px;
