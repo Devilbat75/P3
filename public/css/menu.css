@@ -196,7 +196,6 @@ a {
 }
 @media screen and (min-width: 992px) {
   .all_cards__1 {
-    margin-left: 40px;
     flex-wrap: wrap;
     flex-direction: column;
   }
@@ -212,7 +211,6 @@ a {
 }
 @media screen and (min-width: 992px) {
   .all_cards__2 {
-    margin-left: 40px;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: flex-start;
@@ -229,7 +227,6 @@ a {
 }
 @media screen and (min-width: 992px) {
   .all_cards__3 {
-    margin-left: 40px;
     flex-wrap: wrap;
     flex-direction: column;
   }
