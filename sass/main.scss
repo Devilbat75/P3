@@ -130,14 +130,14 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
-.heart:hover .heart__2 {
+.heart:active .heart__2 {
     font-size: 25px;
     opacity: 1;
     animation: like 3s;
     transform-origin: center;
 }
 
-.heart:hover .heart__1 {
+.heart:active .heart__1 {
     opacity: 0;
 }
 
@@ -162,14 +162,14 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
-.heart:hover .heart__4 {
+.heart:active .heart__4 {
     font-size: 25px;
     opacity: 1;
     animation: like 3s;
     transform-origin: center;
 }
 
-.heart:hover .heart__3 {
+.heart:active .heart__3 {
     opacity: 0;
 }
 
@@ -198,7 +198,7 @@ a {
     @media screen and (min-width:992px) {
         margin-left: 40px;
         flex-wrap: wrap;
-        flex-direction: row;
+        flex-direction: column;
     }
 }
 
@@ -229,7 +229,7 @@ a {
     @media screen and (min-width:992px) {
         margin-left: 40px;
         flex-wrap: wrap;
-        flex-direction: row;
+        flex-direction: column;
     }
 }
 
