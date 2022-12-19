@@ -192,9 +192,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 2px;
-    align-self: flex-start;
+    align-items: flex-start;
     @media screen and (min-width:992px) {
         margin-left: 40px;
         flex-wrap: wrap;
@@ -207,9 +206,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 2px;
-    align-self: flex-start;
     @media screen and (min-width:992px) {
         margin-left: 40px;
         flex-wrap: wrap;
@@ -223,9 +221,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 2px;
-    align-self: flex-start;
     @media screen and (min-width:992px) {
         margin-left: 40px;
         flex-wrap: wrap;
