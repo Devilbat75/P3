@@ -213,7 +213,6 @@ a {
   .all_cards__2 {
     flex-wrap: wrap;
     flex-direction: column;
-    align-content: flex-start;
   }
 }
 
