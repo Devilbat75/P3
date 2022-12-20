@@ -815,17 +815,23 @@ footer i {
   flex-direction: column;
   height: 70px;
   justify-content: space-between;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card_titre_1 h2 {
   margin-bottom: 0;
   font-size: 18px;
   font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card_text_1 p {
   margin-top: 5px;
   font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card_picture_restaurant img {
